@@ -12,15 +12,15 @@ public class Main {
         permuteWithoutCollections(Arrays.stream(arr).mapToInt(Integer::intValue).toArray());
     }
 
-    static void permute(Integer[] arrayBefore, int fistElement) {
+    static void permute(Integer[] arrayBefore, int firstElement) {
         List<Integer> array = Arrays.asList(arrayBefore);
-        for (int i = fistElement; i < array.size(); i++) {
-            Collections.swap(array, i, fistElement);
-            permute(arrayBefore, fistElement + 1);
+        for (int i = firstElement; i < array.size(); i++) {
+            Collections.swap(array, i, firstElement);
+            permute(arrayBefore, firstElement + 1);
 
-            Collections.swap(array, fistElement, i);
+            Collections.swap(array, firstElement, i);
         }
-        if (fistElement == array.size() - 1) {
+        if (firstElement == array.size() - 1) {
             System.out.println(Arrays.toString(array.toArray()));
         }
     }
