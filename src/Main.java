@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Integer[] arr = {3, 4, 6, 2, 1, 9, 5};
 
-        Main.permute(arr, 0);
+        permute(arr, 0);
 
         permuteWithoutCollections(Arrays.stream(arr).mapToInt(Integer::intValue).toArray());
     }
